@@ -1,0 +1,49 @@
+{
+  "name": "notesgen",
+  "version": "0.0.1",
+  "description": "Enhanced Markdown processor for academic notes with math, executable code, and more",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "notesgen": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "node --import tsx --test src/js/runner.test.ts"
+  },
+  "keywords": [
+    "markdown",
+    "html",
+    "cli",
+    "micromark"
+  ],
+  "author": "Lluís Camino",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^14.0.2",
+    "micromark": "^4.0.0",
+    "micromark-extension-math": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lluiscamino/notesgen.git"
+  },
+  "types": "./dist/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/lluiscamino/notesgen/issues"
+  },
+  "homepage": "https://github.com/lluiscamino/notesgen#readme"
+}
